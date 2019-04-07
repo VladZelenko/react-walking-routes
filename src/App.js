@@ -1,53 +1,19 @@
 import React from "react"
-import { compose, withProps } from "recompose"
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import MapWithAMarker from "./Components/maps/map";
 
-const MyMapComponent = compose(
-  withProps({
-    googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
-    loadingElement: <div style={{ height: `100%` }} />,
-    containerElement: <div style={{ height: `98vh` }} />,
-    mapElement: <div style={{ height: `100%` }} />,
-  }),
-  withScriptjs,
-  withGoogleMap
-)((props) =>
-  <GoogleMap
-    defaultZoom={8}
-    defaultCenter={{ lat: -34.397, lng: 150.644 }}
-  >
-    {props.isMarkerShown && <Marker position={{ lat: -34.397, lng: 150.644 }} onClick={props.onMarkerClick} />}
-  </GoogleMap>
-)
-
-class MyFancyComponent extends React.PureComponent {
-  state = {
-    isMarkerShown: false,
-  }
-
-  componentDidMount() {
-    this.delayedShowMarker()
-  }
-
-  delayedShowMarker = () => {
-    setTimeout(() => {
-      this.setState({ isMarkerShown: true })
-    }, 3000)
-  }
-
-  handleMarkerClick = () => {
-    this.setState({ isMarkerShown: false })
-    this.delayedShowMarker()
-  }
-
+class App extends React.Component {
   render() {
     return (
-      <MyMapComponent
-        isMarkerShown={this.state.isMarkerShown}
-        onMarkerClick={this.handleMarkerClick}
-      />
+      <React.Fragment>
+        <MapWithAMarker
+          // googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1YicxS-FTM0adr6nOLBFpg9lXlebqzks&v=3.exp&libraries=geometry,drawing,places"
+          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn1kUvFuDsu1dkeN6Q-d2RHhBFvz78kNo&v=3.exp&libraries=geometry,drawing,places"
+          loadingElement={<div style={{ height: `100%` }} />}
+          containerElement={<div style={{ height: `600px` }} />}
+          mapElement={<div style={{ height: `100%` }} />}
+        />
+      </React.Fragment>
     )
   }
 }
-
-export default MyFancyComponent;
+export default App;
