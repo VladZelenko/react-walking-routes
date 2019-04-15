@@ -1,17 +1,33 @@
 import React from "react"
-import MapWithAMarker from "./Components/maps/map";
+import MyMapComponent from "./Components/maps/map";
+
 
 
 class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <MapWithAMarker
-          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJanaPUC9bIqSPj8dZTxXJpOv7s4timzk&v=3.exp&libraries=geometry,drawing,places"
-          loadingElement={<div style={{ height: `100%` }} />}
-          containerElement={<div style={{ height: `98vh` }} />}
-          mapElement={<div style={{ height: `100%` }} />}
-        />
+        <MyMapComponent />
+        <p>
+          Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+          Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+          В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов,
+          используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил
+          без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+          Его популяризации в новое время послужили публикация листов Letraset с образцами
+          Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа
+          Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+      </p>
+        <p>
+          Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+          Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+          В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов,
+          используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил
+          без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+          Его популяризации в новое время послужили публикация листов Letraset с образцами
+          Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа
+          Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+      </p>
       </React.Fragment>
     )
   }
