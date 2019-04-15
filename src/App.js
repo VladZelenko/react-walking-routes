@@ -18,6 +18,10 @@ const styles = theme => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
+  sizeContainer: {
+    width: `1280px`,
+    margin: `0 auto`,
+  },
 });
 
 function App(props) {
@@ -25,7 +29,7 @@ function App(props) {
 
   return (
     <div className={classes.root} >
-      <Grid container spacing={24}>
+      <Grid container spacing={24} className={classes.sizeContainer}>
         <Grid item xs={12} md={6}>
           <Paper className={classes.paper}>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
