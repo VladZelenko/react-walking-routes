@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import FilledTextFields from './Components/form/Form';
 
 const styles = theme => ({
   root: {
@@ -32,7 +33,7 @@ function App(props) {
       <Grid container spacing={24} className={classes.sizeContainer}>
         <Grid item xs={12} md={6}>
           <Paper className={classes.paper}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            {/* Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
             Voluptas ex, maiores quasi perferendis necessitatibus sequi quaerat 
             hic temporibus doloribus ea esse, facere illo numquam possimus! 
             At fugiat officia sit perferendis.
@@ -47,7 +48,8 @@ function App(props) {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
             Voluptas ex, maiores quasi perferendis necessitatibus sequi quaerat 
             hic temporibus doloribus ea esse, facere illo numquam possimus! 
-            At fugiat officia sit perferendis.
+            At fugiat officia sit perferendis. */}
+            <FilledTextFields />
           </Paper>
         </Grid>
         <Grid item xs={12} md={6}>
