@@ -22,18 +22,15 @@ const styles = theme => ({
 });
 
 class FilledTextFields extends React.Component {
-    state = {
-      name: 'Cat in the Hat',
-      age: '',
-      multiline: 'Controlled',
-      currency: 'EUR',
-    };
+    // state = {
+    
+    // };
   
-    handleChange = name => event => {
-      this.setState({
-        [name]: event.target.value,
-      });
-    };
+    // handleChange = name => event => {
+    //   this.setState({
+    //     [name]: event.target.value,
+    //   });
+    // };
   
     render() {
       const { classes } = this.props;
@@ -44,34 +41,32 @@ class FilledTextFields extends React.Component {
             id="filled-name"
             label="Name"
             className={classes.textField}
-            value={this.state.name}
-            onChange={this.handleChange('name')}
+            // value={this.state.name}
+            // onChange={this.handleChange('name')}
             margin="normal"
             variant="filled"
           />
   
-          <TextField
+          {/* <TextField
             id="filled-read-only-input"
             label="Read Only"
-            defaultValue="Hello World"
             className={classes.textField}
             margin="normal"
             InputProps={{
               readOnly: true,
             }}
             variant="filled"
-          />
+          /> */}
   
           <TextField
             id="filled-multiline-flexible"
             label="Multiline"
             multiline
             rowsMax="4"
-            value={this.state.multiline}
-            onChange={this.handleChange('multiline')}
+            // value={this.state.multiline}
+            // onChange={this.handleChange('multiline')}
             className={classes.textField}
             margin="normal"
-            helperText="hello"
             variant="filled"
           />
   
@@ -80,7 +75,6 @@ class FilledTextFields extends React.Component {
             label="Multiline"
             multiline
             rows="4"
-            defaultValue="Default Value"
             className={classes.textField}
             margin="normal"
             variant="filled"
