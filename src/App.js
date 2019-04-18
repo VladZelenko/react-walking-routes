@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import FilledTextFields from './Components/form/Form';
+import FullWidthTabs from './Components/form/FormTabs';
 
 const styles = theme => ({
   root: {
@@ -50,6 +51,7 @@ function App(props) {
             hic temporibus doloribus ea esse, facere illo numquam possimus! 
             At fugiat officia sit perferendis. */}
             <FilledTextFields />
+            <FullWidthTabs />
           </Paper>
         </Grid>
         <Grid item xs={12} md={6}>
