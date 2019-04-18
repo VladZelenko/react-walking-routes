@@ -50,7 +50,6 @@ function App(props) {
             Voluptas ex, maiores quasi perferendis necessitatibus sequi quaerat 
             hic temporibus doloribus ea esse, facere illo numquam possimus! 
             At fugiat officia sit perferendis. */}
-            <FilledTextFields />
             <FullWidthTabs />
           </Paper>
         </Grid>

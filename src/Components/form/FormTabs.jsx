@@ -6,6 +6,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
+import FilledTextFields from './Form'
 
 function TabContainer({ children, dir }) {
   return (
@@ -54,7 +55,7 @@ class FullWidthTabs extends React.Component {
             variant="fullWidth"
           >
             <Tab label="Item One" />
-            <Tab label="Item Two" />
+            <Tab label="Favorites" />
           </Tabs>
         </AppBar>
         <SwipeableViews
@@ -62,9 +63,10 @@ class FullWidthTabs extends React.Component {
           index={this.state.value}
           onChangeIndex={this.handleChangeIndex}
         >
-          <TabContainer dir={theme.direction}>Item One</TabContainer>
+          <TabContainer dir={theme.direction}>
+            <FilledTextFields />
+          </TabContainer>
           <TabContainer dir={theme.direction}>Item Two</TabContainer>
-          <TabContainer dir={theme.direction}>Item Three</TabContainer>
         </SwipeableViews>
       </div>
     );
